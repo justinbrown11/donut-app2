@@ -24,7 +24,7 @@ db.connect((err) => {
   console.log("Connected to the MySQL database");
 });
 
-app.get("/donuts", (req, res) => {
+app.get("/", (req, res) => {
     const sql = "SELECT * FROM donuts";
     db.query(sql, (err, result) => {
         if (err) {
