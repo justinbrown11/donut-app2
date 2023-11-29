@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delicious Donuts</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Delicious Donuts</h1>
+        </header>
+        <div class="donut-container">
+            <% donuts.forEach(function(donut) { %>
+                <div class="donut-card">
+                    <h2 class="donut-name"><%= donut.name %></h2>
+                    <img src="<%= donut.image_url %>" alt="<%= donut.name %>" class="donut-image" />
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</body>
+</html>
